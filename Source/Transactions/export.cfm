@@ -9,6 +9,7 @@
 --->
 
 <!--- Set page details --->
+
 <CFSET stPageDetails.Title = stPageDetails.Title & " Export">
 <CFSET stPageDetails.CSS = "transactions_export.css">
 <CFINCLUDE TEMPLATE="../Includes/header.cfm">

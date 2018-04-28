@@ -7,7 +7,6 @@
 #
 ################################################################################
 --->
-
 <CFOUTPUT>
 <!DOCTYPE HTML PUBLIC "#stPageDetails.DTPublicIdentifier#" "#stPageDetails.DTSystemIdentifier#">
 
