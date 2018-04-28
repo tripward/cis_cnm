@@ -1,0 +1,17 @@
+#dlgArchivedExports {
+	width: 400px;
+	margin: 20px 28% 20px 28%;
+}
+
+#ButtonArray {
+	margin: 1em 0em 0em 0em;
+}
+
+.Dialog .Body FIELDSET {
+	float: none;
+}
+
+.Dialog .Body DIV.FormControl LABEL {
+	width: 10em;
+}
+

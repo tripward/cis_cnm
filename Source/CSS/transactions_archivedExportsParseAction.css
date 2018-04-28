@@ -1,0 +1,24 @@
+#dlgDialog {
+	width: 955px;
+	margin: 20px 1% 20px 1%;
+}
+
+#fsClientInformation {
+	padding-bottom: 2.2em;
+	width: 30%;
+}
+
+#fsTransactionInformation {
+	width: 34%;
+}
+
+#fsPolicyInformation {
+	width: 30%;
+}
+
+#ButtonArray {
+	position : relative;
+	bottom: 12pt;
+	margin-right: 10px;
+}
+

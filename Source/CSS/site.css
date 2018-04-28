@@ -1,0 +1,287 @@
+BODY {
+	font-family: verdana,arial,helvetica;
+	font-size: 10pt;
+	color: #000000;
+	background-color: #FFFFFF;
+	margin: 0px 0px 0px 0px;
+}
+
+
+/*  Banner Bar  */
+.Banner {
+	width: 100%;
+	height: 45px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-color: #CCCCCC;
+}
+
+#BannerLogo {
+	width: 302px;
+	height: 45px;
+	float: left;
+	padding-right: 25px;
+	background : url(../Images/grey_arch.gif) no-repeat right;
+}
+
+#BannerTagline {
+	width: 395px;
+	height: 45px;
+	float: right;
+}
+
+
+/*  Menu Bar  */
+.MenuBar {
+	color: #FFFFFF;
+	font-size: 8pt;
+	height: 1.3em;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 4px 1px 4px;
+	background-color: #660000;
+	border-top: 2px solid #660000;
+	border-bottom: 2px solid #660000;
+}
+
+#MenuItems {
+	margin: 0px 0px 0px 0px;
+	padding: 1px 1px 1px 1px;
+	list-style: none;
+	display: inline;
+	float: left;
+}
+
+#MenuItems LI {
+	margin: 0px 0px 0px 0px;
+	display: inline;
+}
+
+#MenuItems LI A {
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 0px 10px 0px 10px;
+	margin: 1px 1px 1px 1px;
+}
+
+#MenuItems LI A:hover {
+	border: 1px solid #B2C3FF;
+	margin: 0px 0px 0px 0px;
+}
+
+#MenuBarStatus {
+	padding: 0px 0px 0px 10px;
+	color: #B2C3FF;
+	font-weight: bold;
+	float: right;
+}
+
+
+/*  Main content area  */
+.Main {
+	margin: 0px 10px 0px 10px;
+}
+
+
+/*  Footer  */
+.Footer {
+	margin: 10px 0px 0px 0px;
+	padding: 10px 10px 20px 0px;
+	border-top: 1px solid #660000;
+	text-align: right;
+	font-size: 8pt;
+	color: #660000;
+}
+
+
+/*  Dialog Box */
+.Dialog {
+	border-top: 2px solid #DDDDDD;
+	border-left: 2px solid #DDDDDD;
+	border-bottom: 2px solid #777777;
+	border-right: 2px solid #777777;
+	font-size: 8pt;
+}
+
+.Dialog .Title {
+	background-color: #660000;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 3px;
+}
+
+.Dialog .Body {
+	background-color: #CCCCCC;
+	line-height: 150%;
+	font-weight: normal;
+	margin: 0px;
+	padding: 5px;
+}
+
+.Dialog .Body TABLE {
+	margin-left: auto;
+	margin-right: auto;
+	border: 0.1em solid #888888;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.Dialog .Body TR {
+	background-color: #DDDDDD;
+}
+
+.Dialog .Body TR.Header {
+	font-weight: bold;
+	background-color: #888888;
+	color: #FFFFFF;
+}
+
+.Dialog .Body TR.Footer {
+	background-color: #888888;
+	color: #FFFFFF;
+}
+
+.Dialog .Body TR.Footer TD {
+	text-align: center;
+}
+
+.Dialog .Body TR.Alternate {
+	background-color: #DDFFDD;
+}
+
+.Dialog .Body TD {
+	padding: 0.1em 0.2em 0.1em 0.2em;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 0.1em solid #888888;
+}
+
+.Dialog .Body TR.Header TD A {
+	color: #FFFFFF;
+}
+
+.Dialog .Body FORM {
+	margin: 0px 0px 0px 0px;
+}
+
+.Dialog .Body UL {
+	margin : 0px 10px 10px 10px;
+}
+
+.Dialog .Body LI {
+	list-style-type : none;
+}
+
+.Dialog .Body P {
+	margin : 0px 0px 10px 0px;
+}
+
+.Dialog .Body A {
+	text-decoration: none;
+	border-bottom: 1px solid #660000;
+	color: #660000;
+}
+
+.Dialog .Body A:hover {
+	color: #000000;
+}
+
+.Dialog .Body FIELDSET {
+	margin: 2px 2px 2px 2px;
+	padding: 4px 4px 4px 4px;
+	float: left;
+}
+
+.Dialog .Body FIELDSET TABLE {
+	margin: 0px 0px 0px 4px;
+	width: 95%;
+}
+
+.Dialog .Body FIELDSET TD.header {
+	text-align: left;
+}
+
+.Dialog .Body FIELDSET TD {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: right;
+}
+.Dialog .Body DIV.FormControl {
+	clear: both;
+}
+
+.Dialog .Body DIV.FormControl LABEL {
+	margin: 0px 0px 0px 0px;
+	display: block;
+	width: 14em;
+	text-align: left;
+	float: left;
+}
+
+.Dialog .Body DIV.FormControl INPUT, .Dialog .Body DIV.FormControl SELECT {
+	font-size: 8pt;
+}
+
+.Dialog .Body DIV.RadioControl {
+	clear: both;
+}
+
+.Dialog .Body DIV.RadioControl INPUT {
+	margin: 0px 0px 0px 0px;
+	display: block;
+	width: 3em;
+	text-align: left;
+	float: left;
+	font-size: 8pt;
+}
+
+.Dialog .Body DIV.RadioControl DIV.FormControl LABEL {
+	margin: 0px 0px 0px 2em;
+	width: 11em;
+}
+
+.Dialog .Body DIV.RadioControl DIV.FormControl INPUT {
+	width: auto;
+}
+
+.Dialog .Body #ButtonArray {
+	clear: both;
+	text-align: right;
+}
+
+.Button {
+	font-size: 8pt;
+	margin: 0px 0px 0px 2px;
+	border: 1px solid #000000;
+}
+
+.Hidden {
+	display: none;
+}
+
+.Error {
+	color: #FF0000;
+}
+
+.Error INPUT, .Error SELECT, .Error TEXTAREA {
+	background-color: #FF0000;
+}
+
+.disabled {
+	color: #888888;
+}
+
+.negative {
+	color: #FF0000;
+}
+
+
+
+.Dialog .Body fieldset div table.errorList tr.header td {
+	font-weight: bold;
+}
+
+.Dialog .Body fieldset div table.errorList tr td {
+	text-align: left;
+	padding: 2px 4px 2px 4px;
+}
+

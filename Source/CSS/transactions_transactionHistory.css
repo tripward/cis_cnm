@@ -1,0 +1,84 @@
+#dlgTransactionHistory {
+	width: 400px;
+	margin: 20px 28% 20px 28%;
+}
+
+#ButtonArray {
+	margin: 1em 0em 0em 0em;
+}
+
+.Dialog .Body FIELDSET {
+	float: none;
+}
+
+#btnFillByName {
+	width: 15px;
+}
+
+
+
+
+
+
+
+
+#dlgSearchResults {
+	border: thin solid #AAAAAA;
+	display: none;
+	width: 400px;
+	height: 100px;
+
+	position: absolute;
+	top: 25%;
+	left: 35%;
+	z-index: 100;
+}
+
+#dlgSearchResults .Body {
+	height: 100px;
+	overflow: auto;
+	background: #FFFFFF;
+}
+
+#dlgSearchResults .Body A {
+	display: block;
+	padding: 1px 0px 1px 0px;
+	width: 95%;
+	text-decoration: none;
+	border: 0px solid black;
+	white-space : nowrap;
+}
+
+#dlgSearchResults .Body A:hover {
+	text-decoration: none;
+	border-bottom: 1px solid #AAAAAA;
+	border-top: 1px solid #AAAAAA;
+	padding: 0px 0px 0px 0px;
+	background: #B2C3FF;
+}
+
+#dlgSearchResults .Body A .srClientID {
+	margin-right: 10px;
+}
+
+
+
+#dlgSearchResults .closeButton {
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-bottom: 1px solid #000000;
+	border-right: 1px solid #000000;
+	background: #DDDDDD;
+	width: 10pt;
+	height: 10pt;
+	text-align: center;
+	float: right;
+	margin-top: -1.5em;
+	margin-right: 2px;
+}
+
+#dlgSearchResults .closeButton A {
+	text-decoration: none;
+	color: #000000;
+}
+

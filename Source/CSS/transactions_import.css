@@ -1,0 +1,12 @@
+#dlgImport {
+	width: 800px;
+	margin: 20px 10% 20px 10%;
+}
+
+#ButtonArray {
+	margin: 1em 0em 0em 0em;
+}
+
+.Dialog .Body FIELDSET {
+	float: none;
+}
