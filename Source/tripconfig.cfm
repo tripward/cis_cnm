@@ -10,13 +10,12 @@
 
 <!--- Create Site Details structure and initialize with defaults --->
 <CFSET stSiteDetails = StructNew()>
-<CFSET stSiteDetails.BaseURL = "/CIS_Intranet">
+<CFSET stSiteDetails.BaseURL = "">
 <CFSET stSiteDetails.BasePath = "C:\Projects\Contemporary Insurance Services\Intranet">
 <CFSET stSiteDetails.DataSource = "CIS_Intranet">
 <CFSET stSiteDetails.DateMask = "MMMM d, yyyy">
 <CFSET stSiteDetails.DateSpanMask.StartDate = "MMMM d-">
 <CFSET stSiteDetails.DateSpanMask.EndDate = "d, yyyy">
-<CFSET stSiteDetails.TimeMask = "h:MM tt">
 
 
 <!--- Create Page Details structure and initialize with defaults --->

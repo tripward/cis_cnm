@@ -14,6 +14,8 @@
 <!--- Determine filename --->
 <CFIF VARIABLES.ExportTypeID EQ 2>
 	<CFSET VARIABLES.FileName = "ac_CNM_" & DateFormat(Now(), "yyyymmdd") & ".txt">
+<CFELSEIF VARIABLES.ExportTypeID EQ 3>
+	<CFSET VARIABLES.FileName = "ncd_CNM_" & DateFormat(Now(), "yyyymmdd") & ".txt">
 <CFELSE>
 	<CFSET VARIABLES.FileName = "pr_CNM_" & DateFormat(Now(), "yyyymmdd") & ".txt">
 </CFIF>
@@ -26,4 +28,5 @@
 
 
 <CFSETTING ENABLECFOUTPUTONLY="Yes">
+
 

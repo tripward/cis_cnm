@@ -18,4 +18,3 @@
 	ORDER BY
 		ExportType
 </CFQUERY>
-

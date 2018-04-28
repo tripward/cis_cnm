@@ -11,7 +11,6 @@
 <!--- Check for required variables --->
 <CFPARAM NAME="VARIABLES.ExportTypeID" TYPE="Numeric">
 
-
 <!--- Query database for client record --->
 <CFQUERY NAME="GetExportType" DATASOURCE="#stSiteDetails.DataSource#">
 	SELECT
@@ -22,4 +21,3 @@
 	WHERE
 		ExportTypeID = <CFQUERYPARAM CFSQLTYPE="CF_SQL_INTEGER" VALUE="#Variables.ExportTypeID#">
 </CFQUERY>
-

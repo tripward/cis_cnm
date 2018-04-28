@@ -40,6 +40,11 @@
 		<CFINCLUDE TEMPLATE="BIZ_buildAccountsCurrentExport.cfm">
 		<CFSET VARIABLES.TotalPremium = grandTotalGrossPremium>
 	</CFCASE>
+	
+	<CFCASE VALUE="Non Cover All Data">
+		<CFINCLUDE TEMPLATE="BIZ_buildNonCoverAllExport.cfm">
+		<!---<CFSET VARIABLES.TotalPremium = grandTotalGrossPremium>--->
+	</CFCASE>
 </CFSWITCH>
 <CFSET VARIABLES.TransactionCodeID = VARIABLES.t_TransactionCodeID>
 

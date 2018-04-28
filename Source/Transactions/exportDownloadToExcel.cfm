@@ -22,6 +22,8 @@
 <!--- Determine filename --->
 <CFIF VARIABLES.ExportTypeID EQ 2>
 	<CFSET VARIABLES.FileName = "AccountsCurrentReport.xls">
+<CFELSEIF VARIABLES.ExportTypeID EQ 3>
+	<CFSET VARIABLES.FileName = "NonCoverAllReport.xls">
 <CFELSE>
 	<CFSET VARIABLES.FileName = "PremiumCodingReport.xls">
 </CFIF>
@@ -30,7 +32,6 @@
 <!--- Download as Excel --->
 <CFHEADER NAME="content-disposition" VALUE="attachment; filename=#VARIABLES.FileName#">
 <CFCONTENT TYPE="application/vnd.ms-excel">
-
 
 <CFOUTPUT>
 <TABLE BORDER="1" BORDERCOLOR="##000000" CELLSPACING="0">
@@ -44,7 +45,8 @@
 		<CFLOOP LIST="#columnList#" INDEX="currEle">
 			<CFIF FindNoCase("Date", currEle) NEQ 0>
 				<CFSET tValue = VARIABLES.ParsedExport["Transaction_#cnt#"][currEle]>
-				<TD>#Mid(tValue, 5, 2)#/#Mid(tValue, 7, 2)#/#Mid(tValue, 1, 4)#</TD>
+				<TD>#Mid(tValue, listGetAt(request.DateComponentStartPositions,2), 2)#/#Mid(tValue, listGetAt(request.DateComponentStartPositions,3), 2)#/#Mid(tValue, listGetAt(request.DateComponentStartPositions,1), 4)#</TD>
+				<!---<TD>#Mid(tValue, 5, 2)#/#Mid(tValue, 7, 2)#/#Mid(tValue, 1, 4)#</TD>--->
 			<CFELSEIF CompareNoCase("TransactionCode", currEle) EQ 0>
 				<TD>#VARIABLES.stTransactionCodes[Int(VARIABLES.ParsedExport["Transaction_#cnt#"][currEle])]#</TD>
 			<CFELSE>
