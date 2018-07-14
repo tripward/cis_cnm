@@ -87,7 +87,7 @@
 
 				
 				<!---<CFSET VARIABLES.NumTransactions = TransactionCount>--->
-				<CFSET columnList = "Program Details,Broker_Name,C_policy_no,C_Effective_Date,C_Expiring_Date,Underwriter_Name,Major_Class_Code,Cov_Basis,Retro_Date,CM_Step,AQI,GWP,Occurrence_Limit,ILF,Aggregate_Limit,Deductible,Deductible_Factor,Agg_Deductible,Agg_Deductible_Factor,Attachment,Class Code,Risk State,Risk Territory,Exposure Base,Exposure Amount,Pro Rata Factor,Status of policy">
+				<CFSET columnList = "Program Details,Broker_Name,C_policy_no,C_Effective_Date,C_Expiring_Date,Underwriter_Name,Major_Class_Code,Cov_Basis,CM of Years,Retro_Date,CM_Step,AQI,GWP,Occurrence_Limit,ILF,Aggregate_Limit,Deductible,Deductible_Factor,Agg_Deductible,Agg_Deductible_Factor,Attachment,Class Code,Risk State,Risk Territory,Exposure Base,Exposure Amount,Pro Rata Factor,Status of policy">
 				<CFINCLUDE TEMPLATE="exportDownloadToExcel.cfm">
 				
 			<CFELSEIF FORM.ExportTypeID EQ 1>

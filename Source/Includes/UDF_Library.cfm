@@ -100,8 +100,18 @@
 		<cfset local.stepFactor = local.getCMStepRecords.factor />
 	</cfif>
 	
-	<!---<cfdump var="#NumberFormat(local.stepFactor, '_____.__')#" label="cgi" abort="true" top="3" />--->
 	<cfreturn decimalFormat(local.stepFactor) />
+</cffunction>
+
+<!--- UDF_reverseDayOfYear(): Returns int of the age of the polocy with a cap of 5 --->
+<cffunction name="UDF_getCM_years" access="public" returntype="any">
+	<cfargument name="retroDate" type="date" required="true">
+	<cfargument name="expireDate" type="date" required="true">
+
+	<cfset local.diffInYears = 0 />
+	<!---get total number of days--->
+	<cfset local.diffInYears = dateDiff('yyyy', '#arguments.retroDate#', '#arguments.expireDate#') />
+	<cfreturn local.diffInYears />
 </cffunction>
 
 

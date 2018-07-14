@@ -50,6 +50,12 @@
 		<cfset request.cov_basis = 'OC'>
 	</cfif>
 	<CFSET VARIABLES.BuildExport = VARIABLES.BuildExport & UDF_padValue(request.cov_basis, " ", "RIGHT", 2)>
+	<!--- CM # of years# --->
+	<CFIF request.cov_basis IS 'CM'>
+		<CFSET VARIABLES.BuildExport = VARIABLES.BuildExport & UDF_padValue(UDF_getCM_years('#GetTransactions.newPolicyRetroactiveDate[idx]#', '#GetTransactions.newPolicyExpirationDate[idx]#'), " ", "RIGHT", 2)>
+	<CFELSE>
+		<CFSET VARIABLES.BuildExport = VARIABLES.BuildExport & UDF_padValue('', " ", "RIGHT", 2)>
+	</CFIF>
 	<!--- Retro_Date --->
 	<CFIF request.cov_basis IS 'CM'>
 		<CFSET VARIABLES.BuildExport = VARIABLES.BuildExport & UDF_padValue(DateFormat(GetTransactions.newPolicyRetroactiveDate[idx], "YYYYMMDD"), "0", "RIGHT", 9)>
@@ -141,6 +147,13 @@
 		<cfset request.cov_basis = 'OC'>
 	</cfif>
 	<CFSET VARIABLES.BuildExport = VARIABLES.BuildExport & UDF_padValue(request.cov_basis, " ", "RIGHT", 2)>
+	<!--- CM # of years# --->
+	<CFIF request.cov_basis IS 'CM'>
+		
+		<CFSET VARIABLES.BuildExport = VARIABLES.BuildExport & UDF_padValue(UDF_getCM_years('#GetTransactions.oldPolicyRetroactiveDate[idx]#', '#GetTransactions.oldPolicyExpirationDate[idx]#'), "0", "RIGHT", 2)>
+	<CFELSE>
+		<CFSET VARIABLES.BuildExport = VARIABLES.BuildExport & UDF_padValue('', " ", "RIGHT", 2)>
+	</CFIF>
 	<!--- Retro_Date --->
 	<CFIF request.cov_basis IS 'CM'>
 		<CFSET VARIABLES.BuildExport = VARIABLES.BuildExport & UDF_padValue(DateFormat(GetTransactions.oldPolicyRetroactiveDate[idx], "YYYYMMDD"), "0", "RIGHT", 9)>

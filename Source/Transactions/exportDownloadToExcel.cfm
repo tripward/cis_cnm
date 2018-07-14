@@ -27,6 +27,9 @@
 <CFELSE>
 	<CFSET VARIABLES.FileName = "PremiumCodingReport.xls">
 </CFIF>
+<!---ListLen(VARIABLES.RawExport, CrLf)--->
+<!---<cfdump var="#ListGetAt(VARIABLES.RawExport, 1, CrLf)#" label="cgi" abort="false" top="3" />
+<cfdump var="#VARIABLES.ParsedExport.Transaction_1#" label="cgi" abort="true" top="1" />--->
 
 
 <!--- Download as Excel --->
@@ -43,6 +46,7 @@
 	<CFLOOP FROM="1" TO="#VARIABLES.NumTransactions#" INDEX="cnt">
 	<TR>
 		<CFLOOP LIST="#columnList#" INDEX="currEle">
+			<!---<cfdump var="#currEle#" label="cgi" abort="true" top="3" />--->
 			<CFIF FindNoCase("Date", currEle) NEQ 0>
 				<CFSET tValue = VARIABLES.ParsedExport["Transaction_#cnt#"][currEle]>
 				<TD>#Mid(tValue, listGetAt(request.DateComponentStartPositions,2), 2)#/#Mid(tValue, listGetAt(request.DateComponentStartPositions,3), 2)#/#Mid(tValue, listGetAt(request.DateComponentStartPositions,1), 4)#</TD>
@@ -50,6 +54,7 @@
 			<CFELSEIF CompareNoCase("TransactionCode", currEle) EQ 0>
 				<TD>#VARIABLES.stTransactionCodes[Int(VARIABLES.ParsedExport["Transaction_#cnt#"][currEle])]#</TD>
 			<CFELSE>
+				<!---<cfdump var="#VARIABLES.ParsedExport["Transaction_#cnt#"]#" label="cgi" abort="true" top="3" />--->
 				<TD>#VARIABLES.ParsedExport["Transaction_#cnt#"][currEle]#</TD>
 			</CFIF>
 		</CFLOOP>
